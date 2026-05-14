@@ -5,6 +5,9 @@ import hashlib
 import os
 
 app = Flask(__name__, static_folder='static')
+@app.route('/')
+def home():
+    return "Skill Swap Backend is Running"
 CORS(app)
 
 DB_PATH = 'skillswap.db'
